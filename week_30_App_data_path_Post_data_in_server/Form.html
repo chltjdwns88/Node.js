@@ -1,0 +1,13 @@
+<form action="http://localhost:3000/process_create" method="post"> <!-- method="post" 방식은 url에 query값이 나와 보안차원에서하기위해, 메소드 생략시 default 값 get방식 --> 
+<p><input type="text" name="title"></p>
+
+<p>
+  <textarea name="description" rows="8" cols="80"></textarea>
+</p>
+
+<p>
+  <input type="submit">
+</p>
+</form>
+
+<!-- localhost:3000/process_create?title=asdas&description=asdas -->
