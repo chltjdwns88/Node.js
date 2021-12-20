@@ -39,7 +39,7 @@ var app = http.createServer(function(request,response){
     console.log()
     if(pathname === '/'){
       if(queryData.id === undefined){
-        fs.readdir('../week_34_modify_delete', function(error, filelist){
+        fs.readdir('../week_34_modify', function(error, filelist){
           var list = templateList(filelist);
           var title = 'welcome';
           var description = "hello Node.js";
@@ -49,7 +49,7 @@ var app = http.createServer(function(request,response){
           response.end(template);
         });
       } else {
-        fs.readdir('../week_34_modify_delete', function(error, filelist){
+        fs.readdir('../week_34_modify', function(error, filelist){
           fs.readFile(`${queryData.id}`, 'utf8', function(err, data){
             var title = queryData.id;
             var list = templateList(filelist);
@@ -62,7 +62,7 @@ var app = http.createServer(function(request,response){
         });
       }
     } else if (pathname === '/create'){
-        fs.readdir('../week_34_modify_delete', function(error, filelist){
+        fs.readdir('../week_34_modify', function(error, filelist){
           var list = templateList(filelist);
           var title = 'WEB-CREATE';
           var template = templateHTML(title, list, `
@@ -92,7 +92,7 @@ var app = http.createServer(function(request,response){
         });
       });
     } else if (pathname === '/update'){
-      fs.readdir('../week_34_modify_delete', function(error, filelist){
+      fs.readdir('../week_34_modify', function(error, filelist){
         fs.readFile(`${queryData.id}`, 'utf8', function(err, data){
           var title = queryData.id;
           var list = templateList(filelist);
