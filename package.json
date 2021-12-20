@@ -1,0 +1,22 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "week_1_5_basic_Node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chltjdwns88/Node.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chltjdwns88/Node.js/issues"
+  },
+  "homepage": "https://github.com/chltjdwns88/Node.js#readme",
+  "dependencies": {
+    "sanitize-html": "^2.6.1"
+  }
+}
