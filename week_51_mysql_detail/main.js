@@ -3,18 +3,8 @@ var fs = require('fs');
 var url = require('url');
 var qs = require('querystring');
 var template = require('./lib_template.js');
-var path = require('path');
-var sanitizeHtml = require('sanitize-html');
-var mysql = require('mysql');
+var connection = require('../lib/db.js');
 
-var connection = mysql.createConnection({
-  host:'localhost',
-  user:'root',
-  password:'1234',
-  database:'opentutorials'
-});
-
-connection.connect();
 
 var app = http.createServer(function(request,response){
     var _url = request.url;
